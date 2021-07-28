@@ -1,0 +1,258 @@
+body{
+    background: linear-gradient(to right,rgba(138, 5, 138, 0.651),gold,rgba(138, 5, 138, 0.651));
+}
+nav{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(101, 12, 184);
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    left: 0%;
+    top: 0%;
+    border-bottom: 2px solid black;
+    z-index: 2;
+}
+ul{
+    display: flex;
+    align-items: flex-end;
+}
+li{
+    display: inline;
+    margin-right: 3vw;
+    width: 7vw;
+    padding: 10px;
+    color: rgba(255, 230, 0, 0.795);
+    background-color: rgb(54, 48, 54);
+    border: 4px double gold;
+    box-shadow: 5px -15px 10px rgb(63, 54, 63);
+    transition: 1s;
+}
+a{
+    text-decoration: none;
+    color: rgba(240, 236, 6, 0.904);
+}
+li:hover{
+    transform: scale(1.03);
+    background-color: rgb(111, 29, 187);
+}
+@media screen and (max-width:1024px){
+    body{
+        width:90%;
+    }
+    header nav ul{
+        width: 48%;
+    } 
+    #news{
+        width: 80%;
+        margin-right: 5%;
+    }
+    #nextSeason .nextSeason{
+        width: 48%;
+    }
+    #video .videos{
+        width: 48%;
+    }
+}
+@media screen and (max-width:768px){
+    header nav ul{
+        width: 70%;
+    } 
+    #nextSeason .nextSeason{
+        width: 98%;
+    }
+    #video .videos{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:425px){
+    nav{
+        height: 40vh;
+    }
+    header nav ul{
+        width: 50%;
+        margin-right: 10%;
+    } 
+    ul li{
+        width: 20%;
+    }
+    #header{
+        margin-top: 40vh;
+    }
+    #news #left{
+        width: 98%;
+    }
+    #news #right{
+        width: 98%;
+    }
+    #nextSeason .scheduale .table{
+        width: 300px;
+    }
+    #video .videos{
+        width: 98%;
+    }
+}
+#header{
+    margin-top: 9%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 5px 5px 5px rgb(240, 43, 240);
+}
+.header{
+    box-shadow: -5px -5px 5px black;
+    border-radius: 8px;
+    width: 40%;
+    animation: header 10s infinite alternate;
+}
+@keyframes header{
+    0%{
+        margin-left:-55% ;
+    }
+    25%{
+        box-shadow: -5px -5px 5px rgba(204, 59, 197, 0.911);
+        text-shadow: 5px 5px 5px black;
+    }
+    50%{
+        box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.863);
+    }
+    75%{
+        box-shadow: -5px -5px 5px rgba(204, 59, 197, 0.911);
+    }
+    100%{
+        margin-left:55% ;
+    }
+}
+#news{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    align-items: stretch;
+    border: 5px inset rgb(129, 129, 129);
+    border-radius: 8px;
+    box-shadow: 5px -5px 10px rgb(110, 110, 98);
+    background-color: rgba(137, 43, 226, 0.596);
+    margin-left: 5%;
+}
+#left{
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    text-align: center;
+    justify-content: space-between;
+    align-items:stretch;
+    border-right: 2px inset black;
+    border-radius: 3px;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px inset black;
+}
+#left img{
+    height: 60%;
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    transition: 1s;
+}
+#left img:hover{
+    filter: brightness(115%);
+    filter: sepia(1);
+}
+#left h3{
+    height: 30%;
+}
+#nextSeason{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 15px;
+    width: 90%;
+    margin-left: 5%;
+    background: radial-gradient(purple,yellow,purple);
+    box-sizing: border-box;
+    box-shadow: 6px 6px 6px 12px black;
+}
+
+.nextSeason{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    border: 2px outset;
+    box-sizing: border-box;
+    box-shadow: -6px -6px 6px 12px black;
+}
+.nextSeason img{
+    width: 80%;
+    height: 50%;
+    border-radius: 2px;
+    box-shadow: 3px 3px 4px purple;
+}
+#schedule{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    border: 2px outset;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 6px 12px black;
+}
+#schedule table{
+    border: 4px outset rgba(213, 87, 238, 0.788);
+    background-color: black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 12px black;
+}
+#schedule table td,th,tr{
+    border: 2px outset rgba(213, 87, 238, 0.788);
+    color:rgb(255, 252, 45) ;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:3px 3px 4px rgb(255, 252, 45);
+    transition: .7s;
+}
+#schedule table td:hover{
+    transform: scale(1.03);
+    background-color: rgb(111, 29, 187);
+    box-shadow: 2px 2px 2px 4px black;
+}
+#video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+    box-shadow: 5px 5px 5px 8px black;
+    background-color: rgb(36, 32, 32);
+}
+.videos{
+    width: 33%;
+}
+.videos iframe{
+    border: 4px double gold;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 8px rgb(170, 32, 189);
+}
+footer p{
+    animation: copyRights 5s infinite alternate ;
+    margin-top: 20px;
+}
+@keyframes copyRights{
+    0%{
+        margin-left: 0%;
+    }
+    100%{
+        margin-left: 76%;
+    }
+}
